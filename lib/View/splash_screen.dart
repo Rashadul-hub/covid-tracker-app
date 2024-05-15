@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     //Navigate to next Screen
     Timer(
-        const Duration(seconds: 5),
+        const Duration(seconds: 3),
         () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => WorldStatesScreen())));
   }
@@ -66,12 +66,13 @@ class _SplashScreenState extends State<SplashScreen>
                   );
                 }),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             const Align(
               alignment: Alignment.center,
               child: Text(
                 AppStrings.splashScreenText,
+                textAlign: TextAlign.center,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
               ),
             )
